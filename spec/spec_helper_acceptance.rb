@@ -14,6 +14,7 @@ RSpec.configure do |c|
     hosts.each do |host|
       on host, puppet('module', 'install', 'puppetlabs-stdlib')
       on host, puppet('module', 'install', 'puppetlabs-apt')
+      on host, puppet('module', 'install', 'puppetlabs-yumrepo_core')
     end
   end
 end
